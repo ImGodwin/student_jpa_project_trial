@@ -1,9 +1,6 @@
 package GodwinE.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -14,6 +11,7 @@ public class Student {
     private UUID id;
     private String name;
     private String surname;
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     public Student(){
